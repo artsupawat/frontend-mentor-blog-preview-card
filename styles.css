@@ -1,0 +1,154 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+    --yellow: hsl(47, 88%, 63%);
+  }
+
+  body {
+    font-family: 'Figtree', sans-serif;
+    background-color: var(--yellow);
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  h1 {
+    margin-top: 0;
+    padding: 0.4em 0;
+  }
+
+  .blog-card-container {
+    position:relative;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 336px;
+    height: 486px;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid var(--black);
+  }
+
+  .blog-card > img {
+    width: 336px;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .blog-card > * {
+    margin-bottom: 24px;
+  }
+
+  .blog-card > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .blog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .blog-content > * {
+    margin-bottom: 12px;
+  }
+
+  .blog-content > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .content-category {
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 800;
+    background-color: var(--yellow);
+    padding: 0.4em;
+    border-radius: 4px;
+  }
+
+  .content-publish-date {
+    color: var(--black);
+    font-size: 18px;
+    padding: 0.4em 0
+  }
+
+  .content-description {
+    color: var(--gray);
+    font-size: 16px;
+  }
+
+  .blog-author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .blog-author > * {
+    margin-right: 0.75em;
+  }
+
+  .blog-author > *:last-child {
+    margin-right: 0;
+  }
+
+  .author-avatar {
+    width: 2em;
+    height: 2em;
+  }
+
+  .author-name {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .blog-card-shadow {
+    position: absolute;
+    background-color: var(--black);
+    z-index: -1;
+    top: 8px;
+    left: 8px;
+    transition: top 0.2s, left 0.2s;
+  }
+
+  .blog-card-container:hover h1 {
+    color: var(--yellow);
+  }
+
+    .blog-card-container:hover .blog-card-shadow {
+        top: 16px;
+        left: 16px;
+    }
+
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+
+/* Responsive design for mobile devices */
+@media only screen and (max-width: 375px) {
+    .blog-card {
+        width: 80%;
+    }
+
+    .blog-card > img {
+        width: 100%;
+    }
+}
